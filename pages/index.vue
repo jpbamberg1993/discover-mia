@@ -2,7 +2,7 @@
   <!-- <section class="container" :style="{ backgroundImage: `url(${logo})` }"> -->
   <section class="container">
     <div class="landing">
-      <nuxt-link :to="{ name: 'discover' }">
+      <nuxt-link :to="{ name: 'intro-video' }">
         <h1 class="discover-header">
           DISCOVER THE WORLD<br />
           IN <span class="city">MIAMI</span>
