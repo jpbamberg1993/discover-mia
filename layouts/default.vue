@@ -5,9 +5,19 @@
 </template>
 
 <style>
+:root {
+  --black: #030303;
+  --pink: #e984b5;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('~static/fonts/CaviarDreams.ttf');
+}
+
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Caviar Dreams', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -22,6 +32,15 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  background: var(--black);
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .button--green {

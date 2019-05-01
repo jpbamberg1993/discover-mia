@@ -1,5 +1,4 @@
 <template>
-  <!-- <section class="container" :style="{ backgroundImage: `url(${logo})` }"> -->
   <section class="container">
     <div class="landing">
       <nuxt-link :to="{ name: 'intro-video' }">
@@ -17,21 +16,6 @@ export default {}
 </script>
 
 <style>
-:root {
-  --black: #231f20;
-  --pink: #e984b5;
-}
-
-@font-face {
-  font-family: 'Caviar Dreams';
-  src: url('~static/fonts/CaviarDreams.ttf');
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
 .container {
   font-family: 'Caviar Dreams', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
@@ -41,7 +25,7 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('~assets/logo.svg');
+  background-image: url('~assets/logo-bg.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--black);
