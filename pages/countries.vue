@@ -4,7 +4,12 @@
     <h1 class="title">Pick your country</h1>
     <div v-for="country in countries" :key="country.id" class="country">
       <nuxt-link :to="{ name: 'about', params: { countryId: country.id } }">
-        <img :src="getFlagImg(country.name)" :alt="getFlagAlt(country.name)" @click="setCountryId(country.id)" />
+        <img
+          :src="getFlagImg(country.name)"
+          :alt="getFlagAlt(country.name)"
+          class="country"
+          @click="setCountryId(country.id)"
+        />
       </nuxt-link>
     </div>
   </div>
@@ -45,5 +50,8 @@ export default {
   color: white;
   justify-self: center;
   margin: 20px 0;
+}
+.country {
+  max-width: 100vw;
 }
 </style>
