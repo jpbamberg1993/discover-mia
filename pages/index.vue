@@ -30,12 +30,10 @@ export default {}
   background-position: center;
   background-color: var(--black);
 }
-
 .discover-header {
   font-size: 30px;
   margin-top: 70vh;
 }
-
 .city {
   color: var(--pink);
 }

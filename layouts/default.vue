@@ -43,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100vw;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;

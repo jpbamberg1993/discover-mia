@@ -40,3 +40,9 @@ export const actions = {
     context.commit('setCurrentCountryId', id)
   },
 }
+
+export const getters = {
+  getCurrentCountry(state) {
+    return state.all.find(country => country.id == state.currentCountryId)
+  },
+}
