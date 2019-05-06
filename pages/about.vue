@@ -1,11 +1,7 @@
 <template>
   <div class="about">
     <img src="~/assets/x-mark.svg" alt="close about page" class="xmark" />
-    <section class="title">
-      <img :src="getImgPath(country.name)" :alt="getAltDescription(country.name)" class="flag" />
-      <h1>{{ country.name.toUpperCase() }}</h1>
-      <h2>in Miami</h2>
-    </section>
+    <CountryTitle :name="country.name" />
     <hr class="hr" />
     <p>
       Peru’s culture is a set of beliefs, customs and way of life inherited from the native Incas, Spanish conquistadors
@@ -18,18 +14,14 @@
 </template>
 
 <script>
+import CountryTitle from '@/components/country-title'
 export default {
+  components: {
+    CountryTitle,
+  },
   computed: {
     country() {
       return this.$store.getters['countries/getCurrentCountry']
-    },
-  },
-  methods: {
-    getImgPath(imgName) {
-      return require(`~/assets/${imgName}-flag.png`)
-    },
-    getAltDescription(imgName) {
-      return `The flag of ${imgName}`
     },
   },
 }
