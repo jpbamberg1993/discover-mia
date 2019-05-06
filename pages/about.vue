@@ -1,6 +1,8 @@
 <template>
   <div class="about bg-img">
-    <img src="~/assets/x-mark.svg" alt="close about page" class="xmark" />
+    <nuxt-link :to="{ name: 'interest' }" class="xmark">
+      <img src="~/assets/x-mark.svg" alt="close about page" />
+    </nuxt-link>
     <CountryTitle :name="country.name" />
     <hr class="hr" />
     <p>
@@ -27,18 +29,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .about {
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('~assets/mountains-bg.png');
-  background-size: cover;
-  height: 100vh;
-  display: grid;
-  padding: 0 2rem;
-}
-.flag {
-  max-width: 50px;
-  margin-bottom: 20px;
+  padding: 0 20px;
 }
 .hr {
   height: 1px;
@@ -46,20 +39,8 @@ export default {
 .xmark {
   justify-self: right;
 }
-.title {
-  justify-self: center;
-  display: grid;
-  justify-items: center;
-  grid-auto-rows: min-content;
-}
-h1 {
-  font-size: 46px;
-}
-h2 {
-  font-size: 26px;
-  font-weight: 400;
-}
 p {
   line-height: 1.7;
+  color: white;
 }
 </style>
