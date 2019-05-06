@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about bg-img">
     <img src="~/assets/x-mark.svg" alt="close about page" class="xmark" />
     <CountryTitle :name="country.name" />
     <hr class="hr" />

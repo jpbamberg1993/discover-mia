@@ -75,4 +75,11 @@ img {
   color: #fff;
   background-color: #35495e;
 }
+
+.bg-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('~assets/mountains-bg.png');
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+}
 </style>
