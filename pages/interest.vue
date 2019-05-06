@@ -5,7 +5,9 @@
       <CountryTitle :name="country.name" />
       <div class="activity-buttons">
         <img src="~/assets/history.svg" alt="History Button" class="history-button" />
-        <img src="~/assets/cuisine.svg" alt="Cuisine Button" />
+        <nuxt-link :to="{ name: 'cuisine' }">
+          <img src="~/assets/cuisine.svg" alt="Cuisine Button" />
+        </nuxt-link>
         <img src="~/assets/activities.svg" alt="Activities Button" />
         <img src="~/assets/concerts.svg" alt="Concerts Button" />
         <img src="~/assets/landmark.svg" alt="Landmarks Button" />
