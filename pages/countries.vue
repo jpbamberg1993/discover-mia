@@ -54,4 +54,7 @@ export default {
 .country {
   max-width: 100vw;
 }
+.banner {
+  border-bottom: 1px solid white;
+}
 </style>

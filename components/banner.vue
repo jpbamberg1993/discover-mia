@@ -11,7 +11,6 @@ export default {}
 <style scoped>
 .banner {
   background-color: var(--black);
-  border-bottom: 1px solid white;
   display: grid;
   align-items: center;
 }
