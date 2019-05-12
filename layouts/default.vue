@@ -8,11 +8,18 @@
 :root {
   --black: #030303;
   --pink: #e984b5;
+  --blue: #00b5ee;
+  --grey: #918e8e;
 }
 
 @font-face {
   font-family: 'Caviar Dreams';
   src: url('~static/fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+  font-family: 'Misses';
+  src: url('~static/fonts/Misses.otf');
 }
 
 html {
