@@ -15,6 +15,9 @@
       <img src="~/assets/search-icon.svg" alt="search icon" class="search-icon" />
       <input type="search" placeholder="Search for restaurants" name="search" class="search-field" />
     </div>
+    <div class="item-list">
+      <div class="restaurant-1"></div>
+    </div>
   </div>
 </template>
 
@@ -33,6 +36,7 @@ export default {
   background: white;
   display: grid;
   grid-auto-rows: min-content;
+  grid-template-rows: repeat(3, auto) 1fr;
   height: 100vh;
 }
 .logo {
@@ -80,7 +84,7 @@ export default {
   display: flex;
   flex-direction: row;
   height: 40px;
-  margin: 40px 10px;
+  margin: 15px 10px;
   padding: 7px 5px 3px;
 }
 .search-icon {
@@ -99,5 +103,12 @@ export default {
 input[type='search'] {
   font-size: 20px;
   outline: none;
+}
+.restaurant-1 {
+  background-image: url('~assets/restaurant1.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.restaurant__overlay {
 }
 </style>
