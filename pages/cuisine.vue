@@ -15,17 +15,51 @@
       <img src="~/assets/search-icon.svg" alt="search icon" class="search-icon" />
       <input type="search" placeholder="Search for restaurants" name="search" class="search-field" />
     </div>
-    <div class="item-list">
-      <div class="restaurant-1"></div>
+    <div class="restaurants">
+      <div v-for="restaurant in restaurants" :key="restaurant.id" class="restaurant">
+        <img src="~assets/restaurant1.png" alt="first restaurant image" class="restaurant__img" />
+        <div class="restaurant__overlay">
+          <h3>{{ restaurant.name }}</h3>
+          <p>{{ restaurant.location }}</p>
+          <div class="rating">
+            <i v-for="index in 5" :key="index" class="material-icons">
+              {{ starType(index, restaurant.rating) }}
+            </i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      restaurants: [
+        {
+          id: 1,
+          name: 'CVI.CHE 105',
+          location: '105 NE 3rd Ave, Miami, FL 33132',
+          rating: 4,
+        },
+        {
+          id: 2,
+          name: 'Sabor A Peru En Miami',
+          location: '2923 Biscayne Blvd, Miami, FL 33137',
+          rating: 2,
+        },
+      ],
+    }
+  },
   computed: {
     country() {
       return this.$store.getters['countries/getCurrentCountry']
+    },
+  },
+  methods: {
+    starType(index, rating) {
+      return index <= rating ? 'star' : 'star_border'
     },
   },
 }
@@ -84,7 +118,7 @@ export default {
   display: flex;
   flex-direction: row;
   height: 40px;
-  margin: 15px 10px;
+  margin: 20px 10px 10px;
   padding: 7px 5px 3px;
 }
 .search-icon {
@@ -104,11 +138,32 @@ input[type='search'] {
   font-size: 20px;
   outline: none;
 }
-.restaurant-1 {
-  background-image: url('~assets/restaurant1.png');
-  background-repeat: no-repeat;
-  height: 100vh;
+.restaurants {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.restaurant {
+  flex: 0 0 auto;
+  position: relative;
+}
+.restaurant__img {
 }
 .restaurant__overlay {
+  background: #030303aa;
+  color: white;
+  position: absolute;
+  bottom: 13px;
+  left: 15px;
+  width: 88.3%;
+  padding: 10px;
+  border-radius: 15px;
+}
+.restaurant__overlay p {
+  font-size: 11px;
+  padding: 2px 0;
+}
+.material-icons {
+  font-size: 16px;
 }
 </style>
